@@ -1,0 +1,119 @@
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+using namespace std;
+int main() {
+	/*int n,i=1;
+	float sum = 0;
+	cin >> n;
+	while (i <= n) {
+		sum = sum + static_cast<float>(1) / i;
+		i += 2;
+	}
+	cout << sum << endl;*/
+
+
+
+	/*int m, n, t, k;
+	cin >> m >> n;
+	for (k = n; k >= 1; k--)
+		if (m % k == 0 && n % k == 0)
+		    break;
+	cout << "最大公约数是" << k;*/
+
+
+
+/*	int m, n, r, t;
+	cin >> m >> n;
+	if (m < n) {
+		t = m;
+		m = n;
+		n = t;
+	}
+	r = m % n;
+	while (r != 0) {
+		m = n;
+		n = r;
+		r = m % n;
+	}
+	if (r == 0)
+		cout << n;
+	else
+		cout << "最大公约数是" << r;*/  //有问题
+
+
+
+	/*int m, k, num = 0;
+	for (m = 2;m <= 100;m++) {
+		for (k = 2;k <= sqrt(m);k++)
+			if (m % k == 0)
+				break;
+		if (sqrt(m) < k) {
+			cout << m << "\t";
+			num++;
+			if (num % 8 == 0)
+				cout << "\n";
+		}
+	}*/
+
+
+
+	/*int i, j;
+	for (i = 1;i <= 9;i++) {
+		for (j = 1;j <= i;j++)
+			cout << j << "*" << i << "=" << i * j << "\t";
+		cout << "\n";
+	}*/                                                        //九九乘法表
+	
+
+	/*int i, j;
+	for (i = 1;i <= 9;i++) {
+		cout << setw(8 * (i - 1)) << " ";
+		for (j = i;j <= 9;j++)
+			cout << i << "*" << j << "=" << i * j << "\t";
+		cout << "\n";
+	}*/                                                       //倒三角九九乘法表
+
+
+
+
+	//int i, j;
+	//for (i = 1;i <= 6;i++) {
+	//	cout << setw(10 - i) << " ";
+	//	for (j = 1;j <= 2 * i - 1;j++)
+	//		cout << "*";
+	//	cout << "\n";
+	//}
+
+
+
+	int m, n, r, t;
+	cin >> m >> n;
+	if (m == 0 && n == 0) 
+	{
+		cout << "最大公约数不存在";
+	}
+	else
+	{
+		if (m == 0 && n != 0)
+		{
+			cout << n;
+		}
+		if (m != 0 && n == 0)
+		{
+			cout << m;
+		}
+		if (m != 0 && n != 0)
+		{
+			r = m % n;
+			while (r != 0)
+			{
+				m = n;
+				n = r;
+				r = m % n;
+			}
+			cout << n;
+		}
+	}
+	return 0;
+}
