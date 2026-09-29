@@ -1,0 +1,50 @@
+//#include <iostream>
+//using namespace std;
+//int main(){
+//	double x, y, r2;
+//	char left, comma, right;
+//	cout << "请输入坐标(确保输入法为英文半角）：";
+//	cin >> left >> x >> comma >> y >> right;
+//	r2 = x * x + y * y;
+//	if (r2 < 4)
+//		cout << "0";
+//	else if (r2 > 4 && r2 < 16)
+//		cout << "阴影部分面积为36.70";
+//	else
+//		cout << "0";
+//	return 0;
+//}
+
+
+
+//#include <iostream>
+//using namespace std;
+//int main() {
+//	int a, b, c;
+//	cout << "请输入数字：";
+//	cin >> a >> b >> c;
+//	cout << "最小的数字为：";
+//	if (a <= b && a << c)
+//		cout << a;
+//	else if (b <= a && b <= c)
+//		cout << b;
+//	else if (c <= a && c <= b)
+//		cout << c;
+//	return 0;
+//}
+
+
+
+//#include<iostream>
+//using namespace std;
+//int main() {
+//	char c1, c2, c3;
+//	cout << "请输入字母：";
+//	cin >> c1 >> c2 >> c3;
+//	c1 = (c1 - 'a' + 3) % 26 + 'a';
+//	c2 = (c2 - 'a' + 3) % 26 + 'a';
+//	c3 = (c3 - 'a' + 3) % 26 + 'a';
+//	cout << "译后密码：";
+//	cout << c1 << c2 << c3;
+//	return 0;
+//}
