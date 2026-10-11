@@ -1,0 +1,143 @@
+//#include<iostream>
+//using namespace std;
+//int main() {
+//	int t;
+//	double x;
+//	cout << "请输入商品价值x=";
+//	cin >> x;
+//	t = (int)(x / 1000);
+//	switch (t) 
+//	{
+//	case 0:
+//		cout << "实付金额y=" << x;
+//		break;
+//	case 1:
+//		cout << "实付金额y=" << 0.9 * x;
+//		break;
+//	case 2:
+//		cout << "实付金额y=" << 0.8 * x;
+//		break;
+//	default:
+//		cout << "实付金额y=" << x;
+//	}
+//	return 0;
+//}
+
+
+
+
+//#include<iostream>
+//using namespace std;
+//int main() {
+//	double n1, n2;
+//	char op;
+//	cin >> n1 >> op >> n2;
+//	switch (op) 
+//	{
+//	case '+':
+//		cout << n1 << "+" << n2 << "=" << n1 + n2;
+//		break;
+//	case'-':
+//		cout << n1 << "-" << n2 << "=" << n1 - n2;
+//		break;
+//	case'*':
+//		cout << n1 << "*" << n2 << "=" << n1 * n2;
+//		break;
+//	case'/':
+//		cout << n1 << "/" << n2 << "=" << n1 / n2;
+//		break;
+//	default:
+//		cout << "输入错误,请重试。";
+//	}
+//	return 0;
+//}
+
+
+
+
+
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{   
+//	int x, y, z, t;
+//	cin >> x >> y >> z;
+//	if (x > y) 
+//	{
+//		t = x;x = y;y = t;
+//	}
+//	if (x > z)
+//	{
+//		t = x;x = z;z = t;
+//	}
+//	if (y > z)
+//	{
+//		t = y;y = z;z = t;
+//	}
+//	cout << x << "<=" << y << "<=" << z;
+//	return 0;
+//}
+
+
+
+
+
+//#include<iostream>
+//#include<cmath>
+//using namespace std;
+//int main()
+//{
+//	double a, b, c, D, d, x1, x2;
+//	cout << "请输入一元二次方程系数：";
+//	cin >> a >> b >> c;
+//	D = b * b - 4 * a * c;
+//	d = sqrt(D);
+//	if (D > 0) 
+//	{
+//		x1 = (-b + d) / (2 * a);
+//		x2 = (-b - d) / (2 * a);
+//		cout << "x1=" << x1 << " x2=" << x2;
+//	}
+//	else if (fabs(D) < 1e-6)   
+//	{
+//		x1 = (-b) / (2 * a);
+//		cout << "x1=x2=" << x1;
+//	}
+//	else
+//	{
+//		cout << "方程无实数解";
+//	}
+//	return 0;
+//}
+
+
+
+
+
+#include<iostream>
+using namespace std;
+int main() 
+{   
+	int x, y, r1, r2;
+	cout << "请输入两整数:";
+	cin >> x >> y;
+	if (y == 0)
+	{
+		cout << "input error";
+	}
+	else
+	{
+		if (x == 0)
+		{
+			r1 = 0;r2 = y;
+		}
+		else
+		{
+			r1 = x / y;
+			r2 = x % y;
+		}
+		cout << "商=" << r1 << " 余数=" << r2;
+	}
+	return 0;
+}
