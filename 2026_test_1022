@@ -1,0 +1,178 @@
+//#include<iostream>
+//#include<ctime>
+//#include<cstdlib>
+//using namespace std;
+//int main() {
+//    srand(time(0));
+//    int a[10], i;
+//    int sum = 0, max = 0, min = 0;
+//    double p = 0;
+//    cout << "数组：";
+//    for (i = 0;i < 10;i++)
+//    {
+//        a[i] = rand() % 71 + 30;
+//        cout << a[i] << " ";
+//    }
+//    cout << '\n';
+//    for (i = 0;i < 10;i++)
+//    {
+//        sum = sum + a[i];
+//    }
+//    p = sum * 0.1;
+//    for (i = 0;i < 10;i++)
+//    {
+//        if (a[i] > a[max])
+//        {
+//            a[max] = a[i];
+//            max = i;
+//        }
+//    }
+//    for (i = 0;i < 10;i++)
+//    {
+//        if (a[i] < a[min])
+//        {
+//            a[min] = a[i];
+//            min = i;
+//        }
+//    }
+//    cout << "平均数：" << p << " 最大值：" << a[max] << " 最小值：" << a[min];
+//    return 0;
+//}
+
+
+
+
+
+//#include<iostream>
+//#include<ctime>
+//#include<cstdlib>
+//using namespace std;
+//int main() {
+//	srand(time(0));
+//	int a[20], i;
+//	cout << "排列前：";
+//	for (i = 0;i < 20;i++)
+//	{
+//		a[i] = rand() % 101 + 0;
+//		cout << a[i] << " ";
+//	}
+//	cout << '\n';
+//	cout << "排序后：";
+//	for (i = 0;i < 20;i++)
+//	{
+//		int k = i;
+//		for (int j = i + 1;j < 20;j++)
+//		{
+//			if (a[j] < a[k])
+//			{
+//				k = j;
+//			}
+//		}
+//		swap(a[i], a[k]);
+//		cout << a[i] << " ";
+//	}
+//	return 0;
+//}
+
+
+
+
+//#include <iostream>
+//#include <cstdlib>
+//#include <ctime>
+//using namespace std;
+//int main() {
+//    int a[10], b[10];
+//    int m;
+//    srand(time(0));
+//    cout << "原数组为: ";
+//    for (int i = 0; i < 10; i++) 
+//    {
+//        a[i] = rand() % 100;
+//        cout << a[i] << " ";
+//    }
+//    cout << endl;
+//    cout << "请输入右移的位数 m (1~10): ";
+//    cin >> m;
+//    m = m % 10;
+//    if (m < 0) m += 10;
+//    for (int i = 0; i < m; i++) 
+//    {
+//        b[i] = a[10 - m + i];
+//    }
+//    for (int i = 0; i < 10 - m; i++) 
+//    {
+//        b[m + i] = a[i];
+//    }
+//    cout << "右移" << m << "位后: ";
+//    for (int i = 0; i < 10; i++) 
+//    {
+//        cout << b[i] << " ";
+//    }
+//    cout << endl;
+//    return 0;
+//}
+
+
+
+
+
+#include <iostream>
+using namespace std;
+int main() {
+    int a[10];
+    int x;
+    cout << "请依次输入10个整数（程序会自动降序排列）: ";
+    for (int i = 0; i < 10; i++) {
+        cin >> a[i];
+    }
+    for (int i = 0; i < 9; i++) 
+    {
+        int maxIndex = i;
+        for (int j = i + 1; j < 10; j++) 
+        {
+            if (a[j] > a[maxIndex])
+            {
+                maxIndex = j;
+            }
+        }
+        swap(a[i], a[maxIndex]);
+    }
+    cout << "降序排列后的数组: ";
+    for (int i = 0; i < 10; i++) 
+    {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+    cout << "请输入要查找的整数 x: ";
+    cin >> x;
+    int left = 0;
+    int right = 9;
+    int pos = -1;
+    while (left <= right) 
+    {
+        int mid = (left + right) / 2;
+        if (a[mid] == x) 
+        {
+            pos = mid;
+            break;
+        }
+        else if (a[mid] > x)
+        {
+            left = mid + 1;
+        }
+        else 
+        {
+            right = mid - 1;
+        }
+    }
+    if (pos != -1) 
+    {
+        cout << "找到 " << x << "，它在数组中的位置是: 第 " << pos + 1 << " 个（下标为 " << pos << "）" << endl;
+    }
+    else 
+    {
+        cout << "数组中不存在 " << x << endl;
+    }
+    return 0;
+}
