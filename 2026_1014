@@ -1,0 +1,136 @@
+//#include<iostream>
+//using namespace std;
+//int main() {
+//	int n, sum = 0;
+//	for (n = 1;n < 20;n += 2)
+//	{
+//		sum += n;
+//	}
+//	cout << sum;
+//	return 0;
+//}
+
+
+
+
+//#include<iostream>
+//using namespace std;
+//int main() {
+//	int n, k;
+//	cout << "请输入一个整数：";
+//	cin >> n;
+//	if (n == 0)
+//		cout << n;
+//	if (n < 0)
+//	{
+//		n = -n;
+//		cout << "-";
+//		while (n > 0)
+//		{
+//			k = n % 10;
+//			cout << k;
+//			n = n / 10;
+//		}
+//	}
+//	else
+//	{
+//		while (n > 0)
+//		{
+//			k = n % 10;
+//			cout << k;
+//			n = n / 10;
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+
+
+//#include<iostream>
+//using namespace std;
+//int main()
+//{
+//	int i, j, k;
+//	for (i = 1;i <= 9; i++)
+//	{
+//		for (j = 0;j <= 9;j++)
+//		{
+//			for (k = 0;k <= 9;k++)
+//			{
+//				if (100 * i + 10 * j + k == i * i * i + j * j * j + k * k * k)
+//					cout << i << j << k << ' ';
+//			}
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+
+//#include <iostream>
+//#include <cstdlib>
+//#include <ctime>
+//using namespace std;
+//int main()
+//{
+//	srand(time(0));
+//	int a = rand() % 9 + 1;
+//	int n = rand() % 5 + 5;
+//	int t = 0, sum = 0;
+//	for (int i = 0;i < n;i++)
+//	{
+//		t = t * 10 + a;
+//		sum = sum + t;
+//	}
+//	cout << "a=" << a << " n=" << n << " sum=" << sum;
+//	return 0;
+//}
+
+
+
+//
+//#include<iostream>
+//using namespace std;
+//int main() {
+//	double s = 1;
+//	int fenmu = 0;
+//	for (int i = 1;1.0 / (fenmu + i) >= 1e-4;i++)
+//	{
+//		fenmu = fenmu + i;
+//		s = s + 1.0 / fenmu;
+//	}
+//	cout << s;
+//	return 0;
+//}
+
+
+
+
+
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+	double a;
+	cout << "请输入a：";
+	cin >> a;
+	double x = a, nx = 0;
+	cout << "三次方根：";
+	if (a == 0)
+		cout << 0;
+	else
+	{
+		nx = (2.0 / 3) * x + a / (3.0 * x * x);
+		while (fabs(nx - x) > 0.00001)
+		{
+			x = nx;
+			nx = (2.0 / 3) * x + a / (3.0 * x * x);
+		}
+		cout << nx;
+	}
+	return 0;
+}
